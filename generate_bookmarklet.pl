@@ -10,9 +10,7 @@ my ($js, $fh);
 open($fh, '<', $file) or die "Could not open $file for reading: $!";
 $js .= $_ while <$fh>;
 close $fh;
-$js =~ s/^\s+//;
-$js =~ s/\s+$//;
-$js = uri_escape($js);
+$js = javascript_to_bookmarklet_url($js);
 
 $file =~ s/\.js$//i;
 my $bookmarklet_file = "$file.bookmarklet";
@@ -20,3 +18,11 @@ open($fh, '>', $bookmarklet_file) or die "Could not open $bookmarklet_file for w
 print $fh $js;
 close $fh;
 
+sub javascript_to_bookmarklet_url{
+  my ($javascript) = @_;
+  $javascript =~ s/^\s+//;
+  $javascript =~ s/\s+$//;
+  $javascript = uri_escape($javascript);
+  $javascript = "javascript:$javascript";
+  return $javascript;
+}

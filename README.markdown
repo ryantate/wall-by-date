@@ -3,12 +3,11 @@ Wall by date
 
 View old Facebok Wall posts without clicking "Older posts" over and over.
 
-By Ryan Tate, <ryantate@ryantate.com>
 
 INSTALL
 -------
 
-Copy the code in wall-by-date.bookmarklet and add to your web browser bookmarks.
+Copy the code in wall\_by\_date.bookmarklet and add to your web browser bookmarks.
 
 Or, visit <http://ryantate.com/facebook> and drag the "Wall by date" bookmark to your browser's bookmark bar.
 
@@ -38,11 +37,20 @@ CONTACT
 
 Patches and pull requests welcome.
 
-Author: <ryantate@ryantate.com>
+Email: <ryantate@ryantate.com>
 
 Project updates: <http://search.twitter.com/search?q=from:ryantate+%23wallbydate>
 
-Author homepage: <http://ryantate.com>
+CREDITS
+-------
+
+Ryan Tate
+- Original author, maintainer
+
+Alexandre Bortolotti
+-French translation
+-Fixed form positioning
+-Corrected typos
 
 LICENSE
 -------
