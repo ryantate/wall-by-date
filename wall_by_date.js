@@ -51,12 +51,12 @@ function FBMOD_updateMaxTime(){
        span.style.float = 'left';
        var html = '<span>&nbsp;&nbsp;' + il8n().intro + '</span>'; 
        html += '<form action="#" style="display: inline-block; vertical-align: text-top; margin-top: -6px; " id="FBMOD_form" onsubmit="' + a.getAttribute('onclick') + '">';
+       html += '<input id="FBMOD_day" name="FBMOD_day" size="2" value="1" onchange="FBMOD_updateMaxTime()" />';
        html += '<select id="FBMOD_month" name="FBMOD_month" onchange="FBMOD_updateMaxTime()">';
        for (var i = 0; i < il8n().months.length; i++){
 	  html += '<option value="' + i + '">' + il8n().months[i] + '</option>';
        }
        html += '</select> ';
-       html += '<input id="FBMOD_day" name="FBMOD_day" size="2" value="1" onchange="FBMOD_updateMaxTime()" />';
        html += '<input id="FBMOD_year" name="FBMOD_year" value="2010" size="4" onchange="FBMOD_updateMaxTime()" />';
        html += '</form>';
        span.innerHTML = html;
